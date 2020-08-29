@@ -31,6 +31,14 @@ struct ContentView: View {
                         }
                     }
                 }
+
+                List {
+                    Section(header: Text("Translation")) {
+                        ForEach(model.translatedTerms, id: \.self) { term in
+                            Text(term.text)
+                        }
+                    }
+                }
             }
         }
     }

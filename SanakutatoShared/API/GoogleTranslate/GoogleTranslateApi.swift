@@ -10,19 +10,22 @@ import SwiftSoup
 
 class GoogleTranslateApi {
 
-    func parseTerms(input: String) {
+    func parseTerms(input: String) -> [Term] {
+        var result: [Term] = []
         do {
             let doc = try SwiftSoup.parse(input)
             let terms = try doc.getElementsByClass("gt-baf-term-text")
             try terms.forEach {
-                let text = try $0.children().first()?.text()
-                print(text ?? "")
+                if let text = try $0.children().first()?.text() {
+                    result.append(Term(language: .english, text: text))
+                }
             }
         } catch Exception.Error(_, let message) {
             print(message)
         } catch {
             print("error")
         }
+        return result
     }
 
 }

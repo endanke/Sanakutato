@@ -28,6 +28,9 @@
 		309735BE24F67C1500D34BB7 /* SwiftSoup.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 309735BC24F67C1500D34BB7 /* SwiftSoup.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		309735C124F67C1C00D34BB7 /* SwiftSoup.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 309735C024F67C1C00D34BB7 /* SwiftSoup.framework */; };
 		309735C224F67C1C00D34BB7 /* SwiftSoup.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 309735C024F67C1C00D34BB7 /* SwiftSoup.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		30FF9ECF24FA63A5006C019F /* Term.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FF9ECE24FA63A5006C019F /* Term.swift */; };
+		30FF9ED024FA640B006C019F /* Term.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FF9ECE24FA63A5006C019F /* Term.swift */; };
+		30FF9ED124FA640C006C019F /* Term.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FF9ECE24FA63A5006C019F /* Term.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +93,7 @@
 		309735B724F6782200D34BB7 /* GoogleTranslateApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleTranslateApi.swift; sourceTree = "<group>"; };
 		309735BC24F67C1500D34BB7 /* SwiftSoup.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftSoup.framework; path = Carthage/Build/iOS/SwiftSoup.framework; sourceTree = "<group>"; };
 		309735C024F67C1C00D34BB7 /* SwiftSoup.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftSoup.framework; path = Carthage/Build/Mac/SwiftSoup.framework; sourceTree = "<group>"; };
+		30FF9ECE24FA63A5006C019F /* Term.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Term.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +192,7 @@
 		3097359D24F44EC400D34BB7 /* SanakutatoShared */ = {
 			isa = PBXGroup;
 			children = (
+				30FF9ECD24FA6398006C019F /* Model */,
 				309735B224F677E900D34BB7 /* API */,
 				309735A924F5752900D34BB7 /* Vendor */,
 				3097359E24F44EC400D34BB7 /* SanakutatoShared.h */,
@@ -243,6 +248,14 @@
 				309735BC24F67C1500D34BB7 /* SwiftSoup.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		30FF9ECD24FA6398006C019F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				30FF9ECE24FA63A5006C019F /* Term.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -490,6 +503,7 @@
 			files = (
 				309735BA24F678F400D34BB7 /* GoogleTranslateApi.swift in Sources */,
 				3097356F24F44E7500D34BB7 /* AppDelegate.swift in Sources */,
+				30FF9ED124FA640C006C019F /* Term.swift in Sources */,
 				3097357124F44E7500D34BB7 /* SceneDelegate.swift in Sources */,
 				3097357324F44E7500D34BB7 /* ContentView.swift in Sources */,
 			);
@@ -501,6 +515,7 @@
 			files = (
 				309735B924F678F400D34BB7 /* GoogleTranslateApi.swift in Sources */,
 				309735B124F5777900D34BB7 /* WebView.swift in Sources */,
+				30FF9ED024FA640B006C019F /* Term.swift in Sources */,
 				3097358924F44EA100D34BB7 /* ContentView.swift in Sources */,
 				3097358724F44EA100D34BB7 /* AppDelegate.swift in Sources */,
 			);
@@ -510,6 +525,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30FF9ECF24FA63A5006C019F /* Term.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -708,6 +724,7 @@
 		3097359524F44EA200D34BB7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -788,6 +805,7 @@
 		3097359624F44EA200D34BB7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NONNULL = YES;

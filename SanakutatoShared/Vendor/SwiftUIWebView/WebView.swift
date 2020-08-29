@@ -21,6 +21,7 @@ class ViewModel: ObservableObject {
     }
     @Published var history: [String] = []
     @Published var url: String = ""
+    @Published var translatedTerms: [Term] = []
     var webViewNavigationPublisher = PassthroughSubject<WebViewNavigation, Never>()
     var showLoader = PassthroughSubject<Bool, Never>()
     var valuePublisher = PassthroughSubject<String, Never>()
@@ -161,7 +162,7 @@ struct WebView: Representable {
                         "document.body.innerHTML",
                         completionHandler: { (value: Any?, _: Error!) -> Void in
                         if let string = value as? String {
-                            self.api.parseTerms(input: string)
+                            self.parent.viewModel.translatedTerms = self.api.parseTerms(input: string)
                         }
                     })
                 }
