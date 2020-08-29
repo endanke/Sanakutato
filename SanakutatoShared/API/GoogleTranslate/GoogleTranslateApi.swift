@@ -8,7 +8,11 @@
 import Foundation
 import SwiftSoup
 
-class GoogleTranslateApi {
+class GoogleTranslateApi: DictionarySource {
+
+    func fetchTranslation(term: Term) {
+
+    }
 
     func parseTerms(input: String) -> [Term] {
         var result: [Term] = []

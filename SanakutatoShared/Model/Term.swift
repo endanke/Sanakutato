@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum Language {
+enum Language: String {
     case finnish
     case english
 }

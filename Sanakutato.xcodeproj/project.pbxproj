@@ -31,6 +31,11 @@
 		30FF9ECF24FA63A5006C019F /* Term.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FF9ECE24FA63A5006C019F /* Term.swift */; };
 		30FF9ED024FA640B006C019F /* Term.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FF9ECE24FA63A5006C019F /* Term.swift */; };
 		30FF9ED124FA640C006C019F /* Term.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FF9ECE24FA63A5006C019F /* Term.swift */; };
+		30FF9ED524FA6962006C019F /* DictionarySource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FF9ED424FA6962006C019F /* DictionarySource.swift */; };
+		30FF9ED624FA6B1E006C019F /* DictionarySource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FF9ED424FA6962006C019F /* DictionarySource.swift */; };
+		30FF9ED724FA6B1E006C019F /* DictionarySource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FF9ED424FA6962006C019F /* DictionarySource.swift */; };
+		30FF9ED824FA6B27006C019F /* WiktionaryApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FF9ED224FA67EF006C019F /* WiktionaryApi.swift */; };
+		30FF9ED924FA6B27006C019F /* WiktionaryApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FF9ED224FA67EF006C019F /* WiktionaryApi.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +99,8 @@
 		309735BC24F67C1500D34BB7 /* SwiftSoup.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftSoup.framework; path = Carthage/Build/iOS/SwiftSoup.framework; sourceTree = "<group>"; };
 		309735C024F67C1C00D34BB7 /* SwiftSoup.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftSoup.framework; path = Carthage/Build/Mac/SwiftSoup.framework; sourceTree = "<group>"; };
 		30FF9ECE24FA63A5006C019F /* Term.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Term.swift; sourceTree = "<group>"; };
+		30FF9ED224FA67EF006C019F /* WiktionaryApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiktionaryApi.swift; sourceTree = "<group>"; };
+		30FF9ED424FA6962006C019F /* DictionarySource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionarySource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,6 +227,7 @@
 		309735B224F677E900D34BB7 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				30FF9ED424FA6962006C019F /* DictionarySource.swift */,
 				309735B424F677FF00D34BB7 /* Wiktionary */,
 				309735B324F677F600D34BB7 /* GoogleTranslate */,
 			);
@@ -237,6 +245,7 @@
 		309735B424F677FF00D34BB7 /* Wiktionary */ = {
 			isa = PBXGroup;
 			children = (
+				30FF9ED224FA67EF006C019F /* WiktionaryApi.swift */,
 			);
 			path = Wiktionary;
 			sourceTree = "<group>";
@@ -501,6 +510,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30FF9ED724FA6B1E006C019F /* DictionarySource.swift in Sources */,
+				30FF9ED824FA6B27006C019F /* WiktionaryApi.swift in Sources */,
 				309735BA24F678F400D34BB7 /* GoogleTranslateApi.swift in Sources */,
 				3097356F24F44E7500D34BB7 /* AppDelegate.swift in Sources */,
 				30FF9ED124FA640C006C019F /* Term.swift in Sources */,
@@ -513,6 +524,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30FF9ED624FA6B1E006C019F /* DictionarySource.swift in Sources */,
+				30FF9ED924FA6B27006C019F /* WiktionaryApi.swift in Sources */,
 				309735B924F678F400D34BB7 /* GoogleTranslateApi.swift in Sources */,
 				309735B124F5777900D34BB7 /* WebView.swift in Sources */,
 				30FF9ED024FA640B006C019F /* Term.swift in Sources */,
@@ -525,6 +538,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30FF9ED524FA6962006C019F /* DictionarySource.swift in Sources */,
 				30FF9ECF24FA63A5006C019F /* Term.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

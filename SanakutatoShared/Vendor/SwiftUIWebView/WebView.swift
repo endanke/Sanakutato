@@ -22,6 +22,7 @@ class ViewModel: ObservableObject {
     @Published var history: [String] = []
     @Published var url: String = ""
     @Published var translatedTerms: [Term] = []
+    var searchTerm: Term { return Term(language: .english, text: searchText) }
     var webViewNavigationPublisher = PassthroughSubject<WebViewNavigation, Never>()
     var showLoader = PassthroughSubject<Bool, Never>()
     var valuePublisher = PassthroughSubject<String, Never>()
@@ -37,7 +38,7 @@ enum WebUrl {
 
 struct WebView: Representable {
 
-    let api = GoogleTranslateApi()
+    let wiktionary = WiktionaryApi()
     weak var webView: WKWebView?
 
     #if os(macOS)
@@ -94,6 +95,7 @@ struct WebView: Representable {
         if let url = URL(string: viewModel.url), webView.url != url {
             print("Loading url")
             webView.load(URLRequest(url: url))
+            wiktionary.fetchTranslation(term: viewModel.searchTerm)
         }
     }
 
