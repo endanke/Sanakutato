@@ -6,20 +6,339 @@
 	objectVersion = 50;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		3097356F24F44E7500D34BB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3097356E24F44E7500D34BB7 /* AppDelegate.swift */; };
+		3097357124F44E7500D34BB7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3097357024F44E7500D34BB7 /* SceneDelegate.swift */; };
+		3097357324F44E7500D34BB7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3097357224F44E7500D34BB7 /* ContentView.swift */; };
+		3097357524F44E7800D34BB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3097357424F44E7800D34BB7 /* Assets.xcassets */; };
+		3097357824F44E7800D34BB7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3097357724F44E7800D34BB7 /* Preview Assets.xcassets */; };
+		3097357B24F44E7800D34BB7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3097357924F44E7800D34BB7 /* LaunchScreen.storyboard */; };
+		3097358724F44EA100D34BB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3097358624F44EA100D34BB7 /* AppDelegate.swift */; };
+		3097358924F44EA100D34BB7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3097358824F44EA100D34BB7 /* ContentView.swift */; };
+		3097358B24F44EA200D34BB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3097358A24F44EA200D34BB7 /* Assets.xcassets */; };
+		3097358E24F44EA200D34BB7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3097358D24F44EA200D34BB7 /* Preview Assets.xcassets */; };
+		3097359124F44EA200D34BB7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3097358F24F44EA200D34BB7 /* Main.storyboard */; };
+		309735A024F44EC400D34BB7 /* SanakutatoShared.h in Headers */ = {isa = PBXBuildFile; fileRef = 3097359E24F44EC400D34BB7 /* SanakutatoShared.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		309735A324F44EC400D34BB7 /* SanakutatoShared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3097359C24F44EC400D34BB7 /* SanakutatoShared.framework */; };
+		309735A424F44EC400D34BB7 /* SanakutatoShared.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3097359C24F44EC400D34BB7 /* SanakutatoShared.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		309735B124F5777900D34BB7 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309735AB24F5754F00D34BB7 /* WebView.swift */; };
+		309735B924F678F400D34BB7 /* GoogleTranslateApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309735B724F6782200D34BB7 /* GoogleTranslateApi.swift */; };
+		309735BA24F678F400D34BB7 /* GoogleTranslateApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309735B724F6782200D34BB7 /* GoogleTranslateApi.swift */; };
+		309735BD24F67C1500D34BB7 /* SwiftSoup.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 309735BC24F67C1500D34BB7 /* SwiftSoup.framework */; };
+		309735BE24F67C1500D34BB7 /* SwiftSoup.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 309735BC24F67C1500D34BB7 /* SwiftSoup.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		309735C124F67C1C00D34BB7 /* SwiftSoup.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 309735C024F67C1C00D34BB7 /* SwiftSoup.framework */; };
+		309735C224F67C1C00D34BB7 /* SwiftSoup.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 309735C024F67C1C00D34BB7 /* SwiftSoup.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		309735A124F44EC400D34BB7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3097356124F44DAD00D34BB7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3097359B24F44EC400D34BB7;
+			remoteInfo = SanakutatoShared;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		309735A824F44EC400D34BB7 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				309735A424F44EC400D34BB7 /* SanakutatoShared.framework in Embed Frameworks */,
+				309735C224F67C1C00D34BB7 /* SwiftSoup.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		309735BF24F67C1500D34BB7 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				309735BE24F67C1500D34BB7 /* SwiftSoup.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		3097356B24F44E7500D34BB7 /* SanakutatIos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SanakutatIos.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3097356E24F44E7500D34BB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3097357024F44E7500D34BB7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		3097357224F44E7500D34BB7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		3097357424F44E7800D34BB7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3097357724F44E7800D34BB7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3097357A24F44E7800D34BB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3097357C24F44E7800D34BB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3097358424F44EA100D34BB7 /* SanakutatoMacos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SanakutatoMacos.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3097358624F44EA100D34BB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3097358824F44EA100D34BB7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		3097358A24F44EA200D34BB7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3097358D24F44EA200D34BB7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3097359024F44EA200D34BB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3097359224F44EA200D34BB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3097359324F44EA200D34BB7 /* SanakutatoMacos.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SanakutatoMacos.entitlements; sourceTree = "<group>"; };
+		3097359C24F44EC400D34BB7 /* SanakutatoShared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SanakutatoShared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3097359E24F44EC400D34BB7 /* SanakutatoShared.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SanakutatoShared.h; sourceTree = "<group>"; };
+		3097359F24F44EC400D34BB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		309735AB24F5754F00D34BB7 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		309735B724F6782200D34BB7 /* GoogleTranslateApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleTranslateApi.swift; sourceTree = "<group>"; };
+		309735BC24F67C1500D34BB7 /* SwiftSoup.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftSoup.framework; path = Carthage/Build/iOS/SwiftSoup.framework; sourceTree = "<group>"; };
+		309735C024F67C1C00D34BB7 /* SwiftSoup.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftSoup.framework; path = Carthage/Build/Mac/SwiftSoup.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3097356824F44E7500D34BB7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				309735BD24F67C1500D34BB7 /* SwiftSoup.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3097358124F44EA100D34BB7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				309735A324F44EC400D34BB7 /* SanakutatoShared.framework in Frameworks */,
+				309735C124F67C1C00D34BB7 /* SwiftSoup.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3097359924F44EC400D34BB7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
 /* Begin PBXGroup section */
 		3097356024F44DAD00D34BB7 = {
 			isa = PBXGroup;
 			children = (
+				3097356D24F44E7500D34BB7 /* SanakutatIos */,
+				3097358524F44EA100D34BB7 /* SanakutatoMacos */,
+				3097359D24F44EC400D34BB7 /* SanakutatoShared */,
+				3097356C24F44E7500D34BB7 /* Products */,
+				309735BB24F67C1400D34BB7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
+		3097356C24F44E7500D34BB7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3097356B24F44E7500D34BB7 /* SanakutatIos.app */,
+				3097358424F44EA100D34BB7 /* SanakutatoMacos.app */,
+				3097359C24F44EC400D34BB7 /* SanakutatoShared.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3097356D24F44E7500D34BB7 /* SanakutatIos */ = {
+			isa = PBXGroup;
+			children = (
+				3097356E24F44E7500D34BB7 /* AppDelegate.swift */,
+				3097357024F44E7500D34BB7 /* SceneDelegate.swift */,
+				3097357224F44E7500D34BB7 /* ContentView.swift */,
+				3097357424F44E7800D34BB7 /* Assets.xcassets */,
+				3097357924F44E7800D34BB7 /* LaunchScreen.storyboard */,
+				3097357C24F44E7800D34BB7 /* Info.plist */,
+				3097357624F44E7800D34BB7 /* Preview Content */,
+			);
+			path = SanakutatIos;
+			sourceTree = "<group>";
+		};
+		3097357624F44E7800D34BB7 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				3097357724F44E7800D34BB7 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3097358524F44EA100D34BB7 /* SanakutatoMacos */ = {
+			isa = PBXGroup;
+			children = (
+				3097358624F44EA100D34BB7 /* AppDelegate.swift */,
+				3097358824F44EA100D34BB7 /* ContentView.swift */,
+				3097358A24F44EA200D34BB7 /* Assets.xcassets */,
+				3097358F24F44EA200D34BB7 /* Main.storyboard */,
+				3097359224F44EA200D34BB7 /* Info.plist */,
+				3097359324F44EA200D34BB7 /* SanakutatoMacos.entitlements */,
+				3097358C24F44EA200D34BB7 /* Preview Content */,
+			);
+			path = SanakutatoMacos;
+			sourceTree = "<group>";
+		};
+		3097358C24F44EA200D34BB7 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				3097358D24F44EA200D34BB7 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3097359D24F44EC400D34BB7 /* SanakutatoShared */ = {
+			isa = PBXGroup;
+			children = (
+				309735B224F677E900D34BB7 /* API */,
+				309735A924F5752900D34BB7 /* Vendor */,
+				3097359E24F44EC400D34BB7 /* SanakutatoShared.h */,
+				3097359F24F44EC400D34BB7 /* Info.plist */,
+			);
+			path = SanakutatoShared;
+			sourceTree = "<group>";
+		};
+		309735A924F5752900D34BB7 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				309735AA24F5753100D34BB7 /* SwiftUIWebView */,
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
+		309735AA24F5753100D34BB7 /* SwiftUIWebView */ = {
+			isa = PBXGroup;
+			children = (
+				309735AB24F5754F00D34BB7 /* WebView.swift */,
+			);
+			path = SwiftUIWebView;
+			sourceTree = "<group>";
+		};
+		309735B224F677E900D34BB7 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				309735B424F677FF00D34BB7 /* Wiktionary */,
+				309735B324F677F600D34BB7 /* GoogleTranslate */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		309735B324F677F600D34BB7 /* GoogleTranslate */ = {
+			isa = PBXGroup;
+			children = (
+				309735B724F6782200D34BB7 /* GoogleTranslateApi.swift */,
+			);
+			path = GoogleTranslate;
+			sourceTree = "<group>";
+		};
+		309735B424F677FF00D34BB7 /* Wiktionary */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Wiktionary;
+			sourceTree = "<group>";
+		};
+		309735BB24F67C1400D34BB7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				309735C024F67C1C00D34BB7 /* SwiftSoup.framework */,
+				309735BC24F67C1500D34BB7 /* SwiftSoup.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		3097359724F44EC400D34BB7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				309735A024F44EC400D34BB7 /* SanakutatoShared.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		3097356A24F44E7500D34BB7 /* SanakutatIos */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3097357D24F44E7800D34BB7 /* Build configuration list for PBXNativeTarget "SanakutatIos" */;
+			buildPhases = (
+				3097356724F44E7500D34BB7 /* Sources */,
+				3097356824F44E7500D34BB7 /* Frameworks */,
+				3097356924F44E7500D34BB7 /* Resources */,
+				309735BF24F67C1500D34BB7 /* Embed Frameworks */,
+				309735C324F67C3900D34BB7 /* Carthage copy-frameworks */,
+				3044B30D24F9AF2B00E990D6 /* SwiftLint */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SanakutatIos;
+			productName = SanakutatIos;
+			productReference = 3097356B24F44E7500D34BB7 /* SanakutatIos.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3097358324F44EA100D34BB7 /* SanakutatoMacos */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3097359424F44EA200D34BB7 /* Build configuration list for PBXNativeTarget "SanakutatoMacos" */;
+			buildPhases = (
+				3097358024F44EA100D34BB7 /* Sources */,
+				3097358124F44EA100D34BB7 /* Frameworks */,
+				3097358224F44EA100D34BB7 /* Resources */,
+				309735A824F44EC400D34BB7 /* Embed Frameworks */,
+				309735C424F67C5300D34BB7 /* Carthage copy-frameworks */,
+				3044B30C24F9AF2300E990D6 /* SwiftLint */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				309735A224F44EC400D34BB7 /* PBXTargetDependency */,
+			);
+			name = SanakutatoMacos;
+			productName = SanakutatoMacos;
+			productReference = 3097358424F44EA100D34BB7 /* SanakutatoMacos.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3097359B24F44EC400D34BB7 /* SanakutatoShared */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 309735A524F44EC400D34BB7 /* Build configuration list for PBXNativeTarget "SanakutatoShared" */;
+			buildPhases = (
+				3097359724F44EC400D34BB7 /* Headers */,
+				3097359824F44EC400D34BB7 /* Sources */,
+				3097359924F44EC400D34BB7 /* Frameworks */,
+				3097359A24F44EC400D34BB7 /* Resources */,
+				3044B30B24F9AF1000E990D6 /* SwiftLint */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SanakutatoShared;
+			productName = SanakutatoShared;
+			productReference = 3097359C24F44EC400D34BB7 /* SanakutatoShared.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		3097356124F44DAD00D34BB7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 1150;
 				LastUpgradeCheck = 1150;
+				TargetAttributes = {
+					3097356A24F44E7500D34BB7 = {
+						CreatedOnToolsVersion = 11.5;
+					};
+					3097358324F44EA100D34BB7 = {
+						CreatedOnToolsVersion = 11.5;
+					};
+					3097359B24F44EC400D34BB7 = {
+						CreatedOnToolsVersion = 11.5;
+						LastSwiftMigration = 1150;
+					};
+				};
 			};
 			buildConfigurationList = 3097356424F44DAD00D34BB7 /* Build configuration list for PBXProject "Sanakutato" */;
 			compatibilityVersion = "Xcode 9.3";
@@ -30,12 +349,198 @@
 				Base,
 			);
 			mainGroup = 3097356024F44DAD00D34BB7;
+			productRefGroup = 3097356C24F44E7500D34BB7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				3097356A24F44E7500D34BB7 /* SanakutatIos */,
+				3097358324F44EA100D34BB7 /* SanakutatoMacos */,
+				3097359B24F44EC400D34BB7 /* SanakutatoShared */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3097356924F44E7500D34BB7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3097357B24F44E7800D34BB7 /* LaunchScreen.storyboard in Resources */,
+				3097357824F44E7800D34BB7 /* Preview Assets.xcassets in Resources */,
+				3097357524F44E7800D34BB7 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3097358224F44EA100D34BB7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3097359124F44EA200D34BB7 /* Main.storyboard in Resources */,
+				3097358E24F44EA200D34BB7 /* Preview Assets.xcassets in Resources */,
+				3097358B24F44EA200D34BB7 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3097359A24F44EC400D34BB7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3044B30B24F9AF1000E990D6 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "PATH=${PATH}:/usr/local/bin\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		3044B30C24F9AF2300E990D6 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "PATH=${PATH}:/usr/local/bin\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		3044B30D24F9AF2B00E990D6 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "PATH=${PATH}:/usr/local/bin\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		309735C324F67C3900D34BB7 /* Carthage copy-frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Carthage copy-frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+		309735C424F67C5300D34BB7 /* Carthage copy-frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Carthage copy-frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3097356724F44E7500D34BB7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				309735BA24F678F400D34BB7 /* GoogleTranslateApi.swift in Sources */,
+				3097356F24F44E7500D34BB7 /* AppDelegate.swift in Sources */,
+				3097357124F44E7500D34BB7 /* SceneDelegate.swift in Sources */,
+				3097357324F44E7500D34BB7 /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3097358024F44EA100D34BB7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				309735B924F678F400D34BB7 /* GoogleTranslateApi.swift in Sources */,
+				309735B124F5777900D34BB7 /* WebView.swift in Sources */,
+				3097358924F44EA100D34BB7 /* ContentView.swift in Sources */,
+				3097358724F44EA100D34BB7 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3097359824F44EC400D34BB7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		309735A224F44EC400D34BB7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3097359B24F44EC400D34BB7 /* SanakutatoShared */;
+			targetProxy = 309735A124F44EC400D34BB7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3097357924F44E7800D34BB7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3097357A24F44E7800D34BB7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		3097358F24F44EA200D34BB7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3097359024F44EA200D34BB7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		3097356524F44DAD00D34BB7 /* Debug */ = {
@@ -50,6 +555,464 @@
 			};
 			name = Release;
 		};
+		3097357E24F44E7800D34BB7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_ASSET_PATHS = "\"SanakutatIos/Preview Content\"";
+				DEVELOPMENT_TEAM = JNF38M8WX5;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = SanakutatIos/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.headprocess.sanakutato;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3097357F24F44E7800D34BB7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_ASSET_PATHS = "\"SanakutatIos/Preview Content\"";
+				DEVELOPMENT_TEAM = JNF38M8WX5;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = SanakutatIos/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.headprocess.sanakutato;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3097359524F44EA200D34BB7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = SanakutatoMacos/SanakutatoMacos.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_ASSET_PATHS = "\"SanakutatoMacos/Preview Content\"";
+				DEVELOPMENT_TEAM = JNF38M8WX5;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = SanakutatoMacos/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.headprocess.sanakutato;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		3097359624F44EA200D34BB7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = SanakutatoMacos/SanakutatoMacos.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_ASSET_PATHS = "\"SanakutatoMacos/Preview Content\"";
+				DEVELOPMENT_TEAM = JNF38M8WX5;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = SanakutatoMacos/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.headprocess.sanakutato;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		309735A624F44EC400D34BB7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = JNF38M8WX5;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = SanakutatoShared/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.headprocess.SanakutatoShared;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		309735A724F44EC400D34BB7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = JNF38M8WX5;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = SanakutatoShared/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.headprocess.SanakutatoShared;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -58,6 +1021,33 @@
 			buildConfigurations = (
 				3097356524F44DAD00D34BB7 /* Debug */,
 				3097356624F44DAD00D34BB7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3097357D24F44E7800D34BB7 /* Build configuration list for PBXNativeTarget "SanakutatIos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3097357E24F44E7800D34BB7 /* Debug */,
+				3097357F24F44E7800D34BB7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3097359424F44EA200D34BB7 /* Build configuration list for PBXNativeTarget "SanakutatoMacos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3097359524F44EA200D34BB7 /* Debug */,
+				3097359624F44EA200D34BB7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		309735A524F44EC400D34BB7 /* Build configuration list for PBXNativeTarget "SanakutatoShared" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				309735A624F44EC400D34BB7 /* Debug */,
+				309735A724F44EC400D34BB7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
