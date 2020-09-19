@@ -6,15 +6,16 @@
 //
 
 import Foundation
+import Combine
 import SwiftSoup
 
 class GoogleTranslateApi: DictionarySource {
 
-    func fetchTranslation(term: Term) {
-
+    func fetchTranslation(term: Term) -> Future<String, Never> {
+        return Future<String, Never> { _ in }
     }
 
-    func parseTerms(input: String) -> [Term] {
+    func parseTerms(input: String) {
         var result: [Term] = []
         do {
             let doc = try SwiftSoup.parse(input)
@@ -29,7 +30,7 @@ class GoogleTranslateApi: DictionarySource {
         } catch {
             print("error")
         }
-        return result
+        self.translatedTerms = result
     }
 
 }

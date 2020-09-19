@@ -6,9 +6,10 @@
 //
 
 import Foundation
+import Combine
 
-protocol DictionarySource {
+class DictionarySource: ObservableObject {
 
-    func fetchTranslation(term: Term)
+    @Published var translatedTerms: [Term] = []
 
 }

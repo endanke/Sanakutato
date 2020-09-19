@@ -4,64 +4,23 @@ import SwiftUI
 import WebKit
 import Combine
 
-#if os(macOS)
-typealias Representable = NSViewRepresentable
-typealias RepresentableContext = NSViewRepresentableContext
-#else
-typealias Representable = UIViewRepresentable
-typealias RepresentableContext = UIViewRepresentableContext
-#endif
-
-class ViewModel: ObservableObject {
-    @Published var searchText: String = "" {
-        didSet {
-            url = "https://translate.google.com/#view=home&op=translate&sl=fi&tl=en&text=\(searchText)"
-            history.append(searchText)
-        }
-    }
-    @Published var history: [String] = []
-    @Published var url: String = ""
-    @Published var translatedTerms: [Term] = []
-    var searchTerm: Term { return Term(language: .english, text: searchText) }
-    var webViewNavigationPublisher = PassthroughSubject<WebViewNavigation, Never>()
-    var showLoader = PassthroughSubject<Bool, Never>()
-    var valuePublisher = PassthroughSubject<String, Never>()
-}
-
-enum WebViewNavigation {
-    case backward, forward
-}
-
-enum WebUrl {
-    case localUrl, publicUrl
-}
-
 struct WebView: Representable {
 
-    let wiktionary = WiktionaryApi()
-    weak var webView: WKWebView?
+    @ObservedObject var viewModel: WebViewModel
 
     #if os(macOS)
-
-    func makeNSView(context: RepresentableContext<WebView>) -> WKWebView {
-        return makeUIView(context: context)
-    }
-
-    func updateNSView(_ nsView: WKWebView, context: RepresentableContext<WebView>) {
-        updateUIView(nsView, context: context)
-    }
-
+    func makeNSView(context: Context) -> WKWebView { return makeView(context: context) }
+    func updateNSView(_ nsView: WKWebView, context: Context) { updateView(nsView, context: context) }
     #else
-
+    func makeUIView(context: Context) -> WKWebView { return makeView(context: context) }
+    func updateUIView(_ uiView: WKWebView, context: Context) { updateView(uiView, context: context) }
     #endif
-
-    @ObservedObject var viewModel: ViewModel
 
     func makeCoordinator() -> Coordinator {
         Coordinator(self)
     }
 
-    func makeUIView(context: Context) -> WKWebView {
+    func makeView(context: Context) -> WKWebView {
         let preferences = WKPreferences()
         preferences.javaScriptEnabled = true
 
@@ -91,17 +50,17 @@ struct WebView: Representable {
         return webView
     }
 
-    func updateUIView(_ webView: WKWebView, context: Context) {
+    func updateView(_ webView: WKWebView, context: Context) {
         if let url = URL(string: viewModel.url), webView.url != url {
             print("Loading url")
             webView.load(URLRequest(url: url))
-            wiktionary.fetchTranslation(term: viewModel.searchTerm)
+        } else if let htmlResource = viewModel.htmlResource {
+            webView.loadHTMLString(htmlResource, baseURL: nil)
         }
     }
 
     class Coordinator: NSObject, WKNavigationDelegate, WKScriptMessageHandler {
 
-        let api = GoogleTranslateApi()
         weak var webView: WKWebView?
         var parent: WebView
         var webViewNavigationSubscriber: AnyCancellable?
@@ -156,15 +115,16 @@ struct WebView: Representable {
 
         func userContentController(_ userContentController: WKUserContentController,
                                    didReceive message: WKScriptMessage) {
+            guard let monitoredResourceURL = self.parent.viewModel.monitoredResourceURL else { return }
             if let dict = message.body as? [String: AnyObject],
                 let status = dict["status"] as? Int,
                 let responseUrl = dict["responseURL"] as? String {
-                if status == 200 && responseUrl.starts(with: "https://translate.google") {
+                if status == 200 && responseUrl.starts(with: monitoredResourceURL) {
                     webView?.evaluateJavaScript(
                         "document.body.innerHTML",
                         completionHandler: { (value: Any?, _: Error!) -> Void in
-                        if let string = value as? String {
-                            self.parent.viewModel.translatedTerms = self.api.parseTerms(input: string)
+                        if let content = value as? String {
+                            self.parent.viewModel.resourceLoaded(content: content)
                         }
                     })
                 }
