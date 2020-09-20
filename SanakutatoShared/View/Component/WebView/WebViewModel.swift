@@ -28,7 +28,8 @@ class WebViewModel: ObservableObject {
         didSet {
             switch content {
             case .googleTranslate:
-                url = "https://translate.google.com/#view=home&op=translate&sl=fi&tl=en&text=\(searchText)"
+                url = Services.googleTranslate.buildURL(from: searchText)
+                print(url)
             case .wiktionary:
                 url = "https://en.wiktionary.org/wiki/\(searchText)"
             case .wiktionaryExtract:
@@ -59,11 +60,12 @@ class WebViewModel: ObservableObject {
     }
 
     func resourceLoaded(content: String) {
-        Services.googleTranslate.parseTerms(input: content)
+        Services.googleTranslate.parseContent(input: content)
     }
 
     private func fetchWiktionaryContent() {
-        Services.wiktionary.fetchTranslation(term: Term(language: .finnish, text: searchText))
+        let words = searchText.components(separatedBy: " ")
+        Services.wiktionary.fetchTranslation(term: Term(language: .finnish, text: words[0]))
             .receive(on: RunLoop.main)
             .sink(receiveValue: { (translation) in
                 print(translation)

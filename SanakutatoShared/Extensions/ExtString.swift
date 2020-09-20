@@ -1,5 +1,5 @@
 //
-//  Extensions.swift
+//  ExtString.swift
 //  SanakutatoShared
 //
 //  Created by Daniel Eke on 2020. 08. 29..

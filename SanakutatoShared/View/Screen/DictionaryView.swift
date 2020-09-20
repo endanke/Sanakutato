@@ -12,22 +12,39 @@ struct DictionaryView: View {
     @ObservedObject var searchHistory = Services.searchHistory
     @ObservedObject var googleTranslate = Services.googleTranslate
     @State var searchText: String = ""
+    @State var selection: Int = 0
 
     var body: some View {
-        HStack(alignment: .center, spacing: 20) {
-            VStack(alignment: .leading, spacing: 20) {
+        HStack(alignment: .center, spacing: .pdNormal) {
+            VStack(alignment: .leading, spacing: .pdNormal) {
                 WebView(viewModel: webViewModel)
             }
 
-            VStack(alignment: .leading, spacing: 20) {
+            VStack(alignment: .leading, spacing: .pdNormal) {
                 TextField("Search text", text: $searchText, onCommit: {
                     self.searchHistory.searchText = self.searchText
                     self.searchHistory.history.append(self.searchText)
                 }).textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding()
 
+                Picker(selection: $selection,
+                       label: Text("Source:"),
+                       content: {
+                        Text("English").tag(0)
+                        Text("Finnish").tag(1)
+                })
+
                 Text(webViewModel.url)
                 Text(searchHistory.searchText)
+
+                List {
+                    Section(header: Text("Translation")) {
+                        Text(googleTranslate.translatedSentence)
+                        ForEach(googleTranslate.translatedTerms, id: \.self) { term in
+                            Text(term.text)
+                        }
+                    }
+                }
 
                 List {
                     Section(header: Text("Search history")) {
@@ -36,15 +53,7 @@ struct DictionaryView: View {
                         }
                     }
                 }
-
-                List {
-                    Section(header: Text("Translation")) {
-                        ForEach(googleTranslate.translatedTerms, id: \.self) { term in
-                            Text(term.text)
-                        }
-                    }
-                }
-            }
+            }.padding(.pdSmall)
         }
     }
 }

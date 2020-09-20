@@ -11,5 +11,6 @@ import Combine
 class DictionarySource: ObservableObject {
 
     @Published var translatedTerms: [Term] = []
-
+    @Published var translatedSentence: String = ""
+    
 }
