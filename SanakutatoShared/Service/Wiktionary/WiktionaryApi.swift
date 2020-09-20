@@ -43,7 +43,9 @@ class WiktionaryApi: DictionarySource {
     var completeLanguage = ""
 
     private func buildUrl(from term: Term) -> URL {
-        guard let url = URL(string: "https://en.wiktionary.org/wiki/\(term.text)?printable=yes") else {
+        guard let escaped = "https://en.wiktionary.org/wiki/\(term.text)"
+            .addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed),
+            let url = URL(string: escaped) else {
             fatalError("Failed to build URL")
         }
         return url
@@ -80,7 +82,6 @@ class WiktionaryApi: DictionarySource {
                 }
             }
         }
-        print(targetSections)
         try parseCompleteLanguage(doc)
     }
 
@@ -97,7 +98,9 @@ class WiktionaryApi: DictionarySource {
             }
             nextSibling = nextSibling?.nextSibling()
         }
-        completeLanguage = completeBlock
+        let urlFixed = completeBlock
+            .replacingOccurrences(of: "href=\"/wiki", with: "href=\"https://en.wiktionary.org/wiki")
+        completeLanguage = urlFixed
     }
 
     private func parseEtymology(_ doc: Document, _ sectionId: String) throws {
@@ -134,7 +137,6 @@ class WiktionaryApi: DictionarySource {
                 let tagName = element.tag().getName()
                 // Stop parsing the section if the tag type matches the start of a new section
                 checkSiblings = !["h3", "h4", "div", "h5"].contains(tagName)
-                print(try element.text())
                 if tagName == "p" {
                     text += try element.text()
                 } else if tagName == "ol" {

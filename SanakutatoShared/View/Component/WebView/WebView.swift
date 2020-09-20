@@ -52,7 +52,6 @@ struct WebView: Representable {
 
     func updateView(_ webView: WKWebView, context: Context) {
         if let url = URL(string: viewModel.url), webView.url != url {
-            print("Loading url")
             webView.load(URLRequest(url: url))
         } else if let htmlResource = viewModel.htmlResource {
             webView.loadHTMLString(htmlResource, baseURL: nil)

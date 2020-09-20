@@ -29,7 +29,6 @@ class WebViewModel: ObservableObject {
             switch content {
             case .googleTranslate:
                 url = Services.googleTranslate.buildURL(from: searchText)
-                print(url)
             case .wiktionary:
                 url = "https://en.wiktionary.org/wiki/\(searchText)"
             case .wiktionaryExtract:
@@ -68,7 +67,6 @@ class WebViewModel: ObservableObject {
         Services.wiktionary.fetchTranslation(term: Term(language: .finnish, text: words[0]))
             .receive(on: RunLoop.main)
             .sink(receiveValue: { (translation) in
-                print(translation)
                 self.htmlResource = translation
             })
             .store(in: &cancellables)

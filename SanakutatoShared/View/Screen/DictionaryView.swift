@@ -22,10 +22,18 @@ struct DictionaryView: View {
 
             VStack(alignment: .leading, spacing: .pdNormal) {
                 TextField("Search text", text: $searchText, onCommit: {
-                    self.searchHistory.searchText = self.searchText
-                    self.searchHistory.history.append(self.searchText)
+                    self.search(for: self.searchText)
                 }).textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding()
+
+                Text("Words: ")
+                ScrollView(.horizontal, showsIndicators: false) {
+                     HStack {
+                        ForEach(searchText.components(separatedBy: " "), id: \.self) { word in
+                            Button("\(word)") { self.search(for: word) }
+                        }
+                     }
+                }
 
                 Picker(selection: $selection,
                        label: Text("Source:"),
@@ -44,17 +52,19 @@ struct DictionaryView: View {
                             Text(term.text)
                         }
                     }
-                }
-
-                List {
                     Section(header: Text("Search history")) {
                         ForEach(searchHistory.history, id: \.self) { text in
-                            Text(text)
+                            Button("\(text)") { self.search(for: text) }
                         }
                     }
                 }
             }.padding(.pdSmall)
         }
+    }
+
+    func search(for searchText: String) {
+        self.searchText = searchText
+        self.searchHistory.setCurrent(searchText: searchText)
     }
 }
 
