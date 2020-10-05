@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		301ED90F252B85AB00FCC34F /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = 301ED90E252B85AB00FCC34F /* SwiftSoup */; };
+		301ED915252B85C100FCC34F /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = 301ED914252B85C100FCC34F /* SwiftSoup */; };
 		3040BC6F2516924A008BBC63 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FF9EF725166E93006C019F /* MainTabView.swift */; };
 		3040BC702516924D008BBC63 /* DictionaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FF9EFA25166EE7006C019F /* DictionaryView.swift */; };
 		3040BC7625169E76008BBC63 /* ExtCGFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3040BC7425169E33008BBC63 /* ExtCGFloat.swift */; };
@@ -25,10 +27,6 @@
 		309735A424F44EC400D34BB7 /* SanakutatoShared.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3097359C24F44EC400D34BB7 /* SanakutatoShared.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		309735B924F678F400D34BB7 /* GoogleTranslateApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309735B724F6782200D34BB7 /* GoogleTranslateApi.swift */; };
 		309735BA24F678F400D34BB7 /* GoogleTranslateApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309735B724F6782200D34BB7 /* GoogleTranslateApi.swift */; };
-		309735BD24F67C1500D34BB7 /* SwiftSoup.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 309735BC24F67C1500D34BB7 /* SwiftSoup.framework */; };
-		309735BE24F67C1500D34BB7 /* SwiftSoup.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 309735BC24F67C1500D34BB7 /* SwiftSoup.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		309735C124F67C1C00D34BB7 /* SwiftSoup.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 309735C024F67C1C00D34BB7 /* SwiftSoup.framework */; };
-		309735C224F67C1C00D34BB7 /* SwiftSoup.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 309735C024F67C1C00D34BB7 /* SwiftSoup.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		30FF9ECF24FA63A5006C019F /* Term.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FF9ECE24FA63A5006C019F /* Term.swift */; };
 		30FF9ED024FA640B006C019F /* Term.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FF9ECE24FA63A5006C019F /* Term.swift */; };
 		30FF9ED124FA640C006C019F /* Term.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FF9ECE24FA63A5006C019F /* Term.swift */; };
@@ -72,18 +70,6 @@
 			dstSubfolderSpec = 10;
 			files = (
 				309735A424F44EC400D34BB7 /* SanakutatoShared.framework in Embed Frameworks */,
-				309735C224F67C1C00D34BB7 /* SwiftSoup.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		309735BF24F67C1500D34BB7 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				309735BE24F67C1500D34BB7 /* SwiftSoup.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -111,8 +97,6 @@
 		3097359F24F44EC400D34BB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		309735AB24F5754F00D34BB7 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		309735B724F6782200D34BB7 /* GoogleTranslateApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleTranslateApi.swift; sourceTree = "<group>"; };
-		309735BC24F67C1500D34BB7 /* SwiftSoup.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftSoup.framework; path = Carthage/Build/iOS/SwiftSoup.framework; sourceTree = "<group>"; };
-		309735C024F67C1C00D34BB7 /* SwiftSoup.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftSoup.framework; path = Carthage/Build/Mac/SwiftSoup.framework; sourceTree = "<group>"; };
 		30FF9ECE24FA63A5006C019F /* Term.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Term.swift; sourceTree = "<group>"; };
 		30FF9ED224FA67EF006C019F /* WiktionaryApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiktionaryApi.swift; sourceTree = "<group>"; };
 		30FF9ED424FA6962006C019F /* DictionarySource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionarySource.swift; sourceTree = "<group>"; };
@@ -131,7 +115,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				309735BD24F67C1500D34BB7 /* SwiftSoup.framework in Frameworks */,
+				301ED915252B85C100FCC34F /* SwiftSoup in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,7 +124,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				309735A324F44EC400D34BB7 /* SanakutatoShared.framework in Frameworks */,
-				309735C124F67C1C00D34BB7 /* SwiftSoup.framework in Frameworks */,
+				301ED90F252B85AB00FCC34F /* SwiftSoup in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,8 +263,6 @@
 		309735BB24F67C1400D34BB7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				309735C024F67C1C00D34BB7 /* SwiftSoup.framework */,
-				309735BC24F67C1500D34BB7 /* SwiftSoup.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -342,8 +324,6 @@
 				3097356724F44E7500D34BB7 /* Sources */,
 				3097356824F44E7500D34BB7 /* Frameworks */,
 				3097356924F44E7500D34BB7 /* Resources */,
-				309735BF24F67C1500D34BB7 /* Embed Frameworks */,
-				309735C324F67C3900D34BB7 /* Carthage copy-frameworks */,
 				3044B30D24F9AF2B00E990D6 /* SwiftLint */,
 			);
 			buildRules = (
@@ -351,6 +331,9 @@
 			dependencies = (
 			);
 			name = SanakutatIos;
+			packageProductDependencies = (
+				301ED914252B85C100FCC34F /* SwiftSoup */,
+			);
 			productName = SanakutatIos;
 			productReference = 3097356B24F44E7500D34BB7 /* SanakutatIos.app */;
 			productType = "com.apple.product-type.application";
@@ -363,7 +346,6 @@
 				3097358124F44EA100D34BB7 /* Frameworks */,
 				3097358224F44EA100D34BB7 /* Resources */,
 				309735A824F44EC400D34BB7 /* Embed Frameworks */,
-				309735C424F67C5300D34BB7 /* Carthage copy-frameworks */,
 				3044B30C24F9AF2300E990D6 /* SwiftLint */,
 			);
 			buildRules = (
@@ -372,6 +354,9 @@
 				309735A224F44EC400D34BB7 /* PBXTargetDependency */,
 			);
 			name = SanakutatoMacos;
+			packageProductDependencies = (
+				301ED90E252B85AB00FCC34F /* SwiftSoup */,
+			);
 			productName = SanakutatoMacos;
 			productReference = 3097358424F44EA100D34BB7 /* SanakutatoMacos.app */;
 			productType = "com.apple.product-type.application";
@@ -425,6 +410,9 @@
 				Base,
 			);
 			mainGroup = 3097356024F44DAD00D34BB7;
+			packageReferences = (
+				301ED90D252B85AB00FCC34F /* XCRemoteSwiftPackageReference "SwiftSoup" */,
+			);
 			productRefGroup = 3097356C24F44E7500D34BB7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -520,42 +508,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "PATH=${PATH}:/usr/local/bin\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
-		};
-		309735C324F67C3900D34BB7 /* Carthage copy-frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Carthage copy-frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
-		};
-		309735C424F67C5300D34BB7 /* Carthage copy-frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Carthage copy-frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1165,6 +1117,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		301ED90D252B85AB00FCC34F /* XCRemoteSwiftPackageReference "SwiftSoup" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/scinfu/SwiftSoup";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.3.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		301ED90E252B85AB00FCC34F /* SwiftSoup */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 301ED90D252B85AB00FCC34F /* XCRemoteSwiftPackageReference "SwiftSoup" */;
+			productName = SwiftSoup;
+		};
+		301ED914252B85C100FCC34F /* SwiftSoup */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 301ED90D252B85AB00FCC34F /* XCRemoteSwiftPackageReference "SwiftSoup" */;
+			productName = SwiftSoup;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3097356124F44DAD00D34BB7 /* Project object */;
 }

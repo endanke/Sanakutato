@@ -5,7 +5,7 @@
 //  Created by Daniel Eke on 2020. 09. 19..
 //
 
-import Foundation
+import CoreGraphics
 
 extension CGFloat {
 
