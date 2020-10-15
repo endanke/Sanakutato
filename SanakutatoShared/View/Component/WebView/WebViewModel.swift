@@ -24,13 +24,13 @@ enum WebContent {
 }
 
 class WebViewModel: ObservableObject {
-    @Published var searchText: String = "" {
+    @Published var searchTerm: Term = Term(language: .english, text: "") {
         didSet {
             switch content {
             case .googleTranslate:
-                url = "https://translate.google.com/#view=home&op=translate&sl=fi&tl=en&text=\(searchText)"
+                url = Services.googleTranslate.buildURL(from: searchTerm.text)
             case .wiktionary:
-                url = "https://en.wiktionary.org/wiki/\(searchText)"
+                url = "https://en.wiktionary.org/wiki/\(searchTerm.text)"
             case .wiktionaryExtract:
                 fetchWiktionaryContent()
             }
@@ -41,7 +41,6 @@ class WebViewModel: ObservableObject {
 
     let content: WebContent
     let monitoredResourceURL: String?
-    var searchTerm: Term { return Term(language: .english, text: searchText) }
     var webViewNavigationPublisher = PassthroughSubject<WebViewNavigation, Never>()
     var showLoader = PassthroughSubject<Bool, Never>()
     var valuePublisher = PassthroughSubject<String, Never>()
@@ -50,23 +49,23 @@ class WebViewModel: ObservableObject {
     init(content: WebContent) {
         self.content = content
         self.monitoredResourceURL = (content == .googleTranslate) ? "https://translate.google" : nil
-        Services.searchHistory.$searchText
+        Services.searchHistory.$searchTerm
             .dropFirst()
             .sink(receiveValue: { (value) in
-                self.searchText = value
+                self.searchTerm = value
             })
             .store(in: &cancellables)
     }
 
     func resourceLoaded(content: String) {
-        Services.googleTranslate.parseTerms(input: content)
+        Services.googleTranslate.parseContent(input: content)
     }
 
     private func fetchWiktionaryContent() {
-        Services.wiktionary.fetchTranslation(term: Term(language: .finnish, text: searchText))
+        let words = searchTerm.text.components(separatedBy: " ")
+        Services.wiktionary.fetchTranslation(term: Term(language: .finnish, text: words[0]))
             .receive(on: RunLoop.main)
             .sink(receiveValue: { (translation) in
-                print(translation)
                 self.htmlResource = translation
             })
             .store(in: &cancellables)
