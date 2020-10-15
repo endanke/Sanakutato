@@ -8,15 +8,23 @@
 import Foundation
 
 class SearchHistory: ObservableObject {
-    @Published private(set) var searchText: String = ""
-    @Published private(set) var history: [String] = []
-    private var searchValues: Set<String> = []
+    @Published private(set) var searchTerm: Term = Term(language: .english, text: "")
+    @Published private(set) var history: Search
+    private var searchValues: Set<Term>
 
-    func setCurrent(searchText: String) {
-        self.searchText = searchText
-        if !searchValues.contains(searchText) {
-            searchValues.insert(searchText)
-            history.insert(searchText, at: 0)
+    init() {
+        var history = Search(terms: [])
+        _ = history.restore()
+        self.history = history
+        self.searchValues = Set(history.terms)
+    }
+
+    func search(term: Term) {
+        self.searchTerm = term
+        if !searchValues.contains(searchTerm) {
+            searchValues.insert(searchTerm)
+            history.terms.insert(searchTerm, at: 0)
         }
+        history.persist()
     }
 }

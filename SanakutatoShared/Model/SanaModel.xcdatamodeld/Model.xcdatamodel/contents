@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19E287" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="PersistentSearch" representedClassName="PersistentSearch" syncable="YES" codeGenerationType="class">
+        <relationship name="terms" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PersistentTerm" inverseName="search" inverseEntity="PersistentTerm"/>
+    </entity>
+    <entity name="PersistentTerm" representedClassName="PersistentTerm" syncable="YES" codeGenerationType="class">
+        <attribute name="language" optional="YES" attributeType="String"/>
+        <attribute name="text" optional="YES" attributeType="String"/>
+        <relationship name="search" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PersistentSearch" inverseName="terms" inverseEntity="PersistentSearch"/>
+    </entity>
+    <elements>
+        <element name="PersistentSearch" positionX="69.2265625" positionY="126.515625" width="128" height="58"/>
+        <element name="PersistentTerm" positionX="-63" positionY="-18" width="128" height="88"/>
+    </elements>
+</model>

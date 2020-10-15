@@ -43,7 +43,7 @@ struct DictionaryView: View {
                 })
 
                 Text(webViewModel.url)
-                Text(searchHistory.searchText)
+                Text(searchText)
 
                 List {
                     Section(header: Text("Translation")) {
@@ -53,8 +53,8 @@ struct DictionaryView: View {
                         }
                     }
                     Section(header: Text("Search history")) {
-                        ForEach(searchHistory.history, id: \.self) { text in
-                            Button("\(text)") { self.search(for: text) }
+                        ForEach(searchHistory.history.terms, id: \.self) { term in
+                            Button("\(term.text)") { self.search(for: term.text) }
                         }
                     }
                 }
@@ -64,7 +64,7 @@ struct DictionaryView: View {
 
     func search(for searchText: String) {
         self.searchText = searchText
-        self.searchHistory.setCurrent(searchText: searchText)
+        self.searchHistory.search(term: Term(language: .english, text: searchText))
     }
 }
 

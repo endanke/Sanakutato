@@ -9,6 +9,7 @@ import Foundation
 
 class Services {
 
+    static let dataManager = DataManager()
     static let searchHistory = SearchHistory()
     static let wiktionary = WiktionaryApi()
     static let googleTranslate = GoogleTranslateApi()
